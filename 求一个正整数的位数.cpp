@@ -1,14 +1,12 @@
-#include <iostream>
+#include <stdio.h> 
 
-using namespace std;
-
-long fac(long  g) {
+int fac(int k) {
 	
-	long  m=0;
+	int m=0;
 	
-	while(g) {
+	while(k) {
 		
-		g=g/10;
+		k=k/10;
 		
 		m++;
 		
@@ -16,22 +14,23 @@ long fac(long  g) {
 	
 	return m;
 	
-} 
+}
 
 int main() {
 	
-	long  n;
+	int n;
 	
-	cin>>n;
+	scanf("%d",&n);
 	
 	if(n<=0)
-	
-		cout<<"这不是正整数。"<<endl;
+		
+		printf("不是正整数");
 		
 	else 
-	
-		cout<<"这个数是个"<<fac(n)<<"位数"<<endl;
-	
+		
+		printf("这个数是%d位数。\n",fac(n)) ;
+		
 	return 0;
-	 
+	
+	
 }

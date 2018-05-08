@@ -1,6 +1,6 @@
-#include <iostream>
+#include <stdio.h>
 
-using namespace std;
+#include <math.h>
 
 int main() {
 	
@@ -8,26 +8,21 @@ int main() {
 	
 	char ch;
 	
-	cin>>a;
-	
-	ch=getchar();
-	
-	cin>>b;
+	scanf("%f%c%f",&a,&ch,&b);
 	
 	switch(ch) {
 		
-		case '+':cout<<"a+b="<<a+b;break;
+		case '+':printf("a+b=%f\n" ,a+b);break;
 		
-		case '-':cout<<"a-b="<<a-b;break;
+		case '-':printf("a-b=%f\n" ,a-b);break; 
 		
-		case '*':cout<<"a*b="<<a*b;break;
+		case '*':printf("a*b=%f\n" ,a*b);break;
 		
-		case '/':cout<<"a/b="<<a/b;break;
+		case '/':printf("a/b=%f \n" ,a/b);break;
 		
-		default:cout<<"不是加减乘除运算。"<<endl;break; 
+		default:printf("不是加减乘除运算");break;
 		
-	}
-	 
-	return 0;
+		}
 	
+	return 0;
 }

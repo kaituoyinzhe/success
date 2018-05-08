@@ -1,6 +1,4 @@
-#include <iostream> 
-
-using namespace std;
+#include <stdio.h>
 
 int gcd(int m,int n) {
 	
@@ -9,26 +7,28 @@ int gcd(int m,int n) {
 	while (m%r!=0||n%r!=0) r--;
 	
 	return r;
+	
 }
 
-int sct(int m,int n) {
+int sct (int m,int n) {
 	
 	int y;
 	
 	y=m*n/gcd(m,n);
 	
 	return y;
+	
 }
 
-int main() {
+int main () {
 	
-	int m,n,t;
+	int m,n,i;
 	
-	cin>>m>>n;
+	scanf("%d%d",&m,&n);
 	
-	t=sct(m,n);
+	i=sct(m,n);
 	
-	cout <<m<<"和"<<n<<"的最小公倍数是："<<t<<endl; 
+	printf("%d和%d的最小公倍数为:%d",m,n,i);
 	
 	return 0;
 	
